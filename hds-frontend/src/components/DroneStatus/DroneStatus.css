@@ -1,0 +1,162 @@
+.drone-status {
+  background: rgba(15, 52, 96, 0.3);
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.drone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.no-drones {
+  text-align: center;
+  padding: 40px 20px;
+  color: #a0a0a0;
+}
+
+.no-drones p {
+  margin: 10px 0;
+}
+
+.no-drones .hint {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.drone-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #0f3460;
+  border-radius: 6px;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+.drone-card:hover {
+  border-color: #00d9ff;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+}
+
+.drone-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #0f3460;
+}
+
+.drone-icon {
+  font-size: 1.2rem;
+}
+
+.drone-name {
+  flex: 1;
+  font-weight: bold;
+  color: #00d9ff;
+  font-size: 0.95rem;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.status-active {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+  border: 1px solid #00ff88;
+}
+
+.status-idle {
+  background: rgba(0, 217, 255, 0.2);
+  color: #00d9ff;
+  border: 1px solid #00d9ff;
+}
+
+.status-returning {
+  background: rgba(255, 170, 0, 0.2);
+  color: #ffaa00;
+  border: 1px solid #ffaa00;
+}
+
+.status-error {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff4444;
+  border: 1px solid #ff4444;
+}
+
+.status-offline {
+  background: rgba(102, 102, 102, 0.2);
+  color: #666666;
+  border: 1px solid #666666;
+}
+
+.drone-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.stat-label {
+  color: #a0a0a0;
+}
+
+.stat-value {
+  color: #ffffff;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.battery-bar {
+  position: relative;
+  width: 120px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #0f3460;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.battery-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.3s, background 0.3s;
+}
+
+.battery-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.more-drones {
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,152 @@
+.mission-logs {
+  background: rgba(15, 52, 96, 0.3);
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100%;
+}
+
+.logs-subtitle {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  margin-bottom: 15px;
+}
+
+.logs-container {
+  flex: 1;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+  padding: 15px;
+  min-height: 300px;
+}
+
+.no-logs {
+  text-align: center;
+  padding: 60px 20px;
+  color: #a0a0a0;
+}
+
+.no-logs p {
+  margin: 10px 0;
+}
+
+.no-logs .hint {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.log-entry {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 4px;
+  border-left: 3px solid;
+  background: rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.log-mission {
+  border-left-color: #00d9ff;
+  background: rgba(0, 217, 255, 0.05);
+}
+
+.log-alert {
+  border-left-color: #ffaa00;
+  background: rgba(255, 170, 0, 0.05);
+}
+
+.log-error {
+  border-left-color: #ff4444;
+  background: rgba(255, 68, 68, 0.05);
+}
+
+.log-success {
+  border-left-color: #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.log-info {
+  border-left-color: #a0a0a0;
+  background: rgba(160, 160, 160, 0.05);
+}
+
+.log-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.log-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.log-type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #a0a0a0;
+}
+
+.log-timestamp {
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #666;
+}
+
+.log-message {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.logs-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #0f3460;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+}
+
+.btn-clear-logs {
+  padding: 6px 12px;
+  background: rgba(255, 68, 68, 0.2);
+  border: 1px solid #ff4444;
+  border-radius: 4px;
+  color: #ff4444;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-clear-logs:hover {
+  background: rgba(255, 68, 68, 0.3);
+  transform: translateY(-1px);
+}
