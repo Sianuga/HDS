@@ -32,7 +32,25 @@ services:
         condition: service_healthy
     volumes:
       - ./app:/app/app
+      - ./tests:/app/tests
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hds_tests
+    environment:
+      DATABASE_URL: postgresql://hds_user:hds_password@db:5432/hds_db
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./app:/app/app
+      - ./tests:/app/tests
+    command: pytest -v
+    profiles:
+      - test
 
 volumes:
   postgres_data:
